@@ -4,22 +4,12 @@ using UnityEngine;
 
 public class Weapon
 {
-    public string name;
-    public int damage;
+   public string Nmae { get; set; }
 
-    //기본 생성자
+    //가상함수
 
-    public Weapon()
+    public virtual void Attack()
     {
-        name = "Unknown";
-        damage = 10;
-    }
-
-    //매개변수가 있는 생성자
-
-    public Weapon(string name, int damage)
-    {
-        this.name = name;
-        this.damage = damage;
+        Debug.Log("무기공격");
     }
 }

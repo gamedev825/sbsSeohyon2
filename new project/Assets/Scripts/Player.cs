@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public Weapon weapon;
-
-    //Player의 생성자
-
-    public Player(string weaponName, int weaponDamage)
-    {
-        weapon = new Weapon(weaponName, weaponDamage); // Weapon의 매개변수 생성자 호출
-    }
+    private Weapon myWeapon;
 
     private void Start()
     {
-        Debug.Log("Player's weapon : " + weapon.name + "with Damage" + weapon.damage);
+        myWeapon = new Sword();
+        myWeapon.Attack();
+
+        myWeapon = new Gun();
+        myWeapon.Attack();
     }
 }
